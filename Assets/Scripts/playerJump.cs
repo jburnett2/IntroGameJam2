@@ -4,8 +4,10 @@ using System.Collections;
 public class playerJump : MonoBehaviour {
     
     public float jumpHeight;
-    private Rigidbody2D theRigidBody;
+    public GameObject groundCheck;
 
+    private Rigidbody2D theRigidBody;
+    public LayerMask groundMask;
 
     // Use this for initialization
     void Start()
@@ -16,9 +18,18 @@ public class playerJump : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        bool grounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundMask);
+        bool inputY = Input.GetButtonDown("Jump");
 
-        float inputY = Input.GetAxis("Vertical");
+        if (grounded)
+        {
+            theRigidBody.isKinematic = true;
+        }
 
-        theRigidBody.AddForce(new Vector2(0, inputY * jumpHeight));
+        if (grounded && inputY)
+        {
+            theRigidBody.isKinematic = false;
+            theRigidBody.AddForce(new Vector2(0, jumpHeight));
+        }
     }
 }
