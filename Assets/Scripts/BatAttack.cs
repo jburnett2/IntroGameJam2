@@ -11,6 +11,12 @@ public class BatAttack : MonoBehaviour {
     Transform BatObject;
     Vector3 BatWireLoc;
 
+    public float BatSpeed;
+    public float HangarXPos;
+    public float HangarYPos;
+    public int GenerationFrequencyPercent;
+    
+
 
     // Use this for initialization
     void Start () {
@@ -33,8 +39,8 @@ public class BatAttack : MonoBehaviour {
 
         Transform hangar = BatOnWire.transform.FindChild("BatHangar");
 
-        hangar.GetComponent<Rigidbody2D>().AddForce(new Vector2(-4000 * (seed / 5f), 0));
-        hangar.transform.position += new Vector3(-10 * seed, -10 * seed, 0f);
+        hangar.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1 * BatSpeed * (seed / 5f), 0));
+        hangar.transform.position += new Vector3(HangarXPos * (seed / 5), HangarYPos * (seed / 5), 0f);
         bats.Add(BatOnWire.GetComponent<BatDeleter>());
     }
 	
@@ -42,10 +48,9 @@ public class BatAttack : MonoBehaviour {
 	void FixedUpdate () {
         int randy = Random.Range(0, 100);
 
-        if (randy > 98)
+        if (randy > 100 - GenerationFrequencyPercent)
         {
             Generate();
-            randy = Random.Range(0, 100);
         }
 
         
