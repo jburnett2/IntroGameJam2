@@ -19,6 +19,7 @@ public class BatAttack : MonoBehaviour {
             BatObj = Resources.Load<GameObject>("Prefabs/BatOnAWire");
             BatObj = (GameObject)Instantiate(BatObj, BatLoc, Quaternion.identity);
             Transform hangar = BatObj.transform.FindChild("BatHangar");
+            //hangar.GetComponent<Rigidbody2D>().AddForce(0, 0, 0, ForceMode.Impulse);
         }
 
 
