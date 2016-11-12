@@ -33,7 +33,7 @@ public class BatNoises : MonoBehaviour {
             alex = Resources.Load<AudioClip>("Sounds/AlexJones/pioneer");
 
         source = GetComponent<AudioSource>();
-        source.PlayOneShot(alex, 1f);
+        source.PlayOneShot(alex, 25f);
     }
 	
 	// Update is called once per frame
