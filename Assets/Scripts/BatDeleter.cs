@@ -9,8 +9,10 @@ public class BatDeleter : MonoBehaviour
 
 
     GameObject bat;
+    public bool dead;
     void Start()
     {
+        dead = false;
         bat = transform.FindChild("bestbat").gameObject;
     }
 
@@ -18,9 +20,19 @@ public class BatDeleter : MonoBehaviour
     {
         if (bat.transform.position.x < -100)
         {
-            GameObject.Find("BatSpawner").GetComponent<BatAttack>().deleteBat(this);
-            GameObject.Destroy(gameObject);
+            StartCoroutine(waitDestroy(0));
         }
+        if (dead == true)
+        {
+            StartCoroutine(waitDestroy(5));
+        }
+        
+    }
+    IEnumerator waitDestroy(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        GameObject.Find("BatSpawner").GetComponent<BatAttack>().deleteBat(this);
+        GameObject.Destroy(gameObject);
     }
 
 }
