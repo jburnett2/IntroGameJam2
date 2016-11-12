@@ -12,7 +12,7 @@ public class musicManager : MonoBehaviour {
 	
     void Awake()
     {
-        source.PlayOneShot(source.clip, .2f);
+        source.PlayOneShot(source.clip, .001f);
     }
 
 	// Update is called once per frame
