@@ -1,47 +1,60 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BatAttack : MonoBehaviour {
 
-    public Bat bestTestBat;
-
-    public class Bat {
-        public
-        Bat(Vector3 startingLoc) { BatLoc = startingLoc; }
-
-        Vector3 BatLoc;
-        Vector3 PivotLoc;
-        GameObject BatObj;
+    BatDeleter bestTestBat;
+    List<BatDeleter> bats;
+    GameObject BatOnWirePrefab;
+    GameObject BatOnWire;
+    Transform BatObject;
+    Vector3 BatWireLoc;
 
 
+    // Use this for initialization
+    void Start () {
+        bats = new List<BatDeleter>();
+        BatOnWirePrefab = Resources.Load<GameObject>("Prefabs/BatOnAWire");
 
-        public void Generate() {
-            BatObj = Resources.Load<GameObject>("Prefabs/BatOnAWire");
-            BatObj = (GameObject)Instantiate(BatObj, BatLoc, Quaternion.identity);
-            Transform hangar = BatObj.transform.FindChild("BatHangar");
-            hangar.GetComponent<Rigidbody2D>().AddForce(new Vector2(-10000,0));
-        }
-
-
-        public void Swoop() {
-            BatObj.transform.eulerAngles = new Vector3(0f, 0f, 30f);
-
-        }
 
     }
+    void Generate()
+    {
+        //This seed determines the hangar's speed, location, and distance from bats
+        float seed = Random.Range(1f, 10f);
 
-	// Use this for initialization
-	void Start () {
+        //Sets the starting location for ALL bats - needs to be adjusted based on final camera size and location.
+        BatWireLoc = new Vector3(-17, 17, 0);
 
-        bestTestBat = new Bat(new Vector3(1f, 1f, 1f));
-        bestTestBat.Generate();
-        bestTestBat.Swoop();
+        BatOnWire = (GameObject)Instantiate(BatOnWirePrefab, BatWireLoc, Quaternion.identity);
+        BatObject = BatOnWire.transform.FindChild("bestbat");
 
 
+        Transform hangar = BatOnWire.transform.FindChild("BatHangar");
+
+        hangar.GetComponent<Rigidbody2D>().AddForce(new Vector2(-4000 * (seed / 5f), 0));
+        hangar.transform.position += new Vector3(-10 * seed, -10 * seed, 0f);
+        bats.Add(BatOnWire.GetComponent<BatDeleter>());
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        int randy = Random.Range(0, 100);
+
+        if (randy > 98)
+        {
+            Generate();
+            randy = Random.Range(0, 100);
+        }
+
         
+
+
+    }
+
+    public void deleteBat(BatDeleter bat)
+    {
+        bats.Remove(bat);
     }
 }
