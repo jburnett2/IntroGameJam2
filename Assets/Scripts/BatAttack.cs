@@ -40,7 +40,7 @@ public class BatAttack : MonoBehaviour {
         Transform hangar = BatOnWire.transform.FindChild("BatHangar");
 
         hangar.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1 * BatSpeed * (seed / 5f), 0));
-        hangar.transform.position += new Vector3(HangarXPos * (seed / 5), HangarYPos * (seed / 5), 0f);
+        hangar.transform.position += new Vector3(-1 * HangarXPos * seed, -1 * HangarYPos * seed, 0f);
         bats.Add(BatOnWire.GetComponent<BatDeleter>());
     }
 	

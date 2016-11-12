@@ -216,6 +216,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012598300252, guid: 2aa726b762d91314baf03b223987e2bf,
+        type: 2}
+      propertyPath: BatSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012598300252, guid: 2aa726b762d91314baf03b223987e2bf,
+        type: 2}
+      propertyPath: HangarXPos
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012598300252, guid: 2aa726b762d91314baf03b223987e2bf,
+        type: 2}
+      propertyPath: HangarYPos
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012598300252, guid: 2aa726b762d91314baf03b223987e2bf,
+        type: 2}
+      propertyPath: GenerationFrequencyPercent
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2aa726b762d91314baf03b223987e2bf, type: 2}
   m_IsPrefabParent: 0
