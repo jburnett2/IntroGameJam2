@@ -7,21 +7,20 @@ public class BatAttack : MonoBehaviour {
 
     public class Bat {
         public
-        Bat(Vector3 startingLoc) { loc = startingLoc; }
+        Bat(Vector3 startingLoc) { BatLoc = startingLoc; }
 
-        Vector3 loc;
+        Vector3 BatLoc;
+        Vector3 PivotLoc;
         GameObject BatObj;
 
 
 
         public void Generate() {
-            BatObj = Resources.Load<GameObject>("Prefabs/bestbat");
-            BatObj = (GameObject)Instantiate(BatObj, new Vector3(1, 1, 2), Quaternion.identity);
+            BatObj = Resources.Load<GameObject>("Prefabs/BatOnAWire");
+            BatObj = (GameObject)Instantiate(BatObj, BatLoc, Quaternion.identity);
+            Transform hangar = BatObj.transform.FindChild("BatHangar");
         }
 
-        public void Jitter() {
-
-        }
 
         public void Swoop() {
             BatObj.transform.eulerAngles = new Vector3(0f, 0f, 30f);
@@ -42,6 +41,6 @@ public class BatAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        
     }
 }
