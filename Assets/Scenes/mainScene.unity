@@ -379,7 +379,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f353515d364f3224486f1fc4aa5b4d3d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1725,6 +1725,26 @@ Prefab:
     - target: {fileID: 4000013486101966, guid: 2aa726b762d91314baf03b223987e2bf, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012598300252, guid: 2aa726b762d91314baf03b223987e2bf,
+        type: 2}
+      propertyPath: BatSpeed
+      value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012598300252, guid: 2aa726b762d91314baf03b223987e2bf,
+        type: 2}
+      propertyPath: HangarXPos
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012598300252, guid: 2aa726b762d91314baf03b223987e2bf,
+        type: 2}
+      propertyPath: HangarYPos
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012598300252, guid: 2aa726b762d91314baf03b223987e2bf,
+        type: 2}
+      propertyPath: GenerationFrequencyPercent
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2aa726b762d91314baf03b223987e2bf, type: 2}
