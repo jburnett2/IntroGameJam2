@@ -4,7 +4,6 @@ using System.Collections;
 public class torsoTilt : MonoBehaviour {
 
     public float tiltForce;
-    public float jumpHeight;
     private Rigidbody2D theRigidBody;
 
     // Use this for initialization
@@ -17,5 +16,5 @@ public class torsoTilt : MonoBehaviour {
         float inputX = Input.GetAxis("Horizontal");
 
         theRigidBody.AddForce(new Vector2(inputX * tiltForce, 50));
-	}
+    }
 }
