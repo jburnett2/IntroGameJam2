@@ -19,7 +19,7 @@ public class BatAttack : MonoBehaviour {
             BatObj = Resources.Load<GameObject>("Prefabs/BatOnAWire");
             BatObj = (GameObject)Instantiate(BatObj, BatLoc, Quaternion.identity);
             Transform hangar = BatObj.transform.FindChild("BatHangar");
-            //hangar.GetComponent<Rigidbody2D>().AddForce(0, 0, 0, ForceMode.Impulse);
+            hangar.GetComponent<Rigidbody2D>().AddForce(new Vector2(-10000,0));
         }
 
 
@@ -41,7 +41,7 @@ public class BatAttack : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         
     }
 }
