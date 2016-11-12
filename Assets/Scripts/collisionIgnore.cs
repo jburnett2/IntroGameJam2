@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playerMove : MonoBehaviour {
+public class collisionIgnore : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +10,6 @@ public class playerMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Physics.IgnoreLayerCollision(8, 9, true); // 8 and 9 are layerID's for player and legs, true sets ignoring to true
+        Physics.IgnoreLayerCollision(8, 9); // 8 and 9 are layerID's for player and legs
 	}
 }
