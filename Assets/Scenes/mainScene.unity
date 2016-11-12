@@ -102,7 +102,8 @@ GameObject:
   - 50: {fileID: 15958095}
   - 61: {fileID: 15958094}
   - 233: {fileID: 15958093}
-  m_Layer: 8
+  - 114: {fileID: 15958097}
+  m_Layer: 10
   m_Name: lArm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -144,7 +145,7 @@ HingeJoint2D:
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_UpperAngle: 180
 --- !u!61 &15958094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -209,6 +210,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &15958097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 15958091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &227598593
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +233,8 @@ GameObject:
   - 50: {fileID: 227598596}
   - 61: {fileID: 227598595}
   - 233: {fileID: 227598598}
-  m_Layer: 8
+  - 114: {fileID: 227598599}
+  m_Layer: 10
   m_Name: lUpArm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -328,6 +341,17 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &227598599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227598593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &548128898
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +363,7 @@ GameObject:
   - 212: {fileID: 548128899}
   - 61: {fileID: 548128901}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,6 +441,8 @@ GameObject:
   - 50: {fileID: 553133195}
   - 233: {fileID: 553133194}
   - 61: {fileID: 553133193}
+  - 114: {fileID: 553133198}
+  - 114: {fileID: 553133199}
   m_Layer: 8
   m_Name: upperTorso
   m_TagString: Player
@@ -460,7 +486,7 @@ HingeJoint2D:
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_UpperAngle: 90
 --- !u!50 &553133195
 Rigidbody2D:
   serializedVersion: 2
@@ -524,6 +550,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2140891215}
   m_RootOrder: 1
+--- !u!114 &553133198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553133192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &553133199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553133192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbda5c6e2a13a148a818eb1778825ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltForce: 300
+  jumpHeight: 300
 --- !u!1 &691363925
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +586,8 @@ GameObject:
   - 50: {fileID: 691363929}
   - 61: {fileID: 691363928}
   - 233: {fileID: 691363927}
-  m_Layer: 8
+  - 114: {fileID: 691363931}
+  m_Layer: 10
   m_Name: rArm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -578,7 +629,7 @@ HingeJoint2D:
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_UpperAngle: 180
 --- !u!61 &691363928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -643,6 +694,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &691363931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691363925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &967010335
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +717,8 @@ GameObject:
   - 50: {fileID: 967010338}
   - 61: {fileID: 967010337}
   - 233: {fileID: 967010340}
-  m_Layer: 8
+  - 114: {fileID: 967010341}
+  m_Layer: 10
   m_Name: rUpArm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -762,6 +825,17 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &967010341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967010335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1037971254
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +848,7 @@ GameObject:
   - 50: {fileID: 1037971257}
   - 233: {fileID: 1037971256}
   - 61: {fileID: 1037971255}
+  - 114: {fileID: 1037971260}
   m_Layer: 9
   m_Name: lowerTorso
   m_TagString: Legs
@@ -881,6 +956,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2140891215}
   m_RootOrder: 2
+--- !u!114 &1037971260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037971254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109986464
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +979,8 @@ GameObject:
   - 58: {fileID: 1109986468}
   - 50: {fileID: 1109986467}
   - 233: {fileID: 1109986466}
-  m_Layer: 0
+  - 114: {fileID: 1109986470}
+  m_Layer: 10
   m_Name: lElbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,6 +1087,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1109986470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1109986464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1340157790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,13 +1197,14 @@ GameObject:
   - 50: {fileID: 1385095788}
   - 61: {fileID: 1385095787}
   - 255: {fileID: 1385095791}
+  - 114: {fileID: 1385095792}
   m_Layer: 9
   m_Name: rleg
   m_TagString: Legs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1385095787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1200,6 +1299,17 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0.7163032, y: -2.0913532}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &1385095792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385095786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1826044201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,7 +1322,8 @@ GameObject:
   - 58: {fileID: 1826044204}
   - 50: {fileID: 1826044202}
   - 233: {fileID: 1826044203}
-  m_Layer: 0
+  - 114: {fileID: 1826044207}
+  m_Layer: 10
   m_Name: rElbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1319,6 +1430,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2140891215}
   m_RootOrder: 7
+--- !u!114 &1826044207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826044201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1962260563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,13 +1453,14 @@ GameObject:
   - 50: {fileID: 1962260565}
   - 61: {fileID: 1962260564}
   - 255: {fileID: 1962260568}
+  - 114: {fileID: 1962260569}
   m_Layer: 9
   m_Name: lleg
   m_TagString: Legs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1962260564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1432,6 +1555,17 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: -0.648084, y: -2.0913532}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &1962260569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962260563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2091965369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1577,7 @@ GameObject:
   - 212: {fileID: 2091965372}
   - 50: {fileID: 2091965370}
   - 58: {fileID: 2091965371}
+  - 114: {fileID: 2091965374}
   m_Layer: 8
   m_Name: Head
   m_TagString: Player
@@ -1458,7 +1593,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2091965369}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1527,6 +1662,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2140891215}
   m_RootOrder: 0
+--- !u!114 &2091965374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091965369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2140891214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1681,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2140891215}
-  - 114: {fileID: 2140891216}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1567,14 +1712,3 @@ Transform:
   - {fileID: 15958092}
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!114 &2140891216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2140891214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c4932f3d7296c41932d57cc09b27bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
